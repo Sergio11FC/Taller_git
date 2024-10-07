@@ -1,0 +1,819 @@
+
+METRO@SALOME MINGW64 ~ (master)
+$ mkdir Taller_git
+
+METRO@SALOME MINGW64 ~ (master)
+$ cd Taller_git
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git init Taller_git
+Initialized empty Git repository in C:/Users/METRO/Taller_git/Taller_git/.git/
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git config --global user.name "Sergio11FC"
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git config --global user.email "sergiooficial11@gmail.com"
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=sergiooficial11@gmail.com
+user.name=Sergio11FC
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git branch
+* feature
+  master
+  newAction
+  nueva-rama
+  rama1
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git branch -d newAction
+Deleted branch newAction (was 524cdb4).
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git branch -d rama1
+Deleted branch rama1 (was 882d0e9).
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git branch -d nueva-rama
+Deleted branch nueva-rama (was 7801f6d).
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git branch
+* feature
+  master
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git status
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.android/
+        ../.bash_history
+        ../.emulator_console_auth_token
+        ../.gitconfig
+        ../.gradle/
+        ../.lesshst
+        ../.ssh/
+        ../.viminfo
+        ../.vscode/
+        ../Aplicaciones/
+        ../AppData/
+        ../Contacts/
+        ../Downloads/
+        ../Favorites/
+        ../IntelGraphicsProfiles/
+        ../Links/
+        ../Music/
+        ../NTUSER.DAT
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TM.blf
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000001.regtrans-ms
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000002.regtrans-ms
+        ../OneDrive/
+        ../Saved Games/
+        ../Searches/
+        ../TallerGit/ejemplo/.index.html.swp
+        ../TallerGit/ejemplo/App.py
+        ../TallerGit/ejemplo/moda.py
+        ../TallerGit/moda.py
+        ./
+        ../Videos/
+        ../app.py
+        ../ntuser.dat.LOG1
+        ../ntuser.dat.LOG2
+        ../ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ echo "Texto agregado en rama feature" >> archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git add archivo.txt
+warning: in the working copy of 'Taller_git/archivo.txt', LF will be replaced by CRLF the next time Git touches it
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git commit -m "commit inicial"
+[feature 53314ed] commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Taller_git/archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git status
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.android/
+        ../.bash_history
+        ../.emulator_console_auth_token
+        ../.gitconfig
+        ../.gradle/
+        ../.lesshst
+        ../.ssh/
+        ../.viminfo
+        ../.vscode/
+        ../Aplicaciones/
+        ../AppData/
+        ../Contacts/
+        ../Downloads/
+        ../Favorites/
+        ../IntelGraphicsProfiles/
+        ../Links/
+        ../Music/
+        ../NTUSER.DAT
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TM.blf
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000001.regtrans-ms
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000002.regtrans-ms
+        ../OneDrive/
+        ../Saved Games/
+        ../Searches/
+        ../TallerGit/ejemplo/.index.html.swp
+        ../TallerGit/ejemplo/App.py
+        ../TallerGit/ejemplo/moda.py
+        ../TallerGit/moda.py
+        Taller_git/
+        ../Videos/
+        ../app.py
+        ../ntuser.dat.LOG1
+        ../ntuser.dat.LOG2
+        ../ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ echo "nuevo comentario" >> archivo.txt        
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git commit -am "second commit in feature"
+warning: in the working copy of 'Taller_git/archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[feature 644042c] second commit in feature
+ 1 file changed, 1 insertion(+)
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git merge feature
+Updating 524cdb4..644042c
+Fast-forward
+ Taller_git/archivo.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 Taller_git/archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 METRO 197121  0 Oct  6 20:25 Taller_git/
+-rw-r--r-- 1 METRO 197121 50 Oct  6 20:59 archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git log --oneline
+644042c (HEAD -> master, feature) second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git reset --hard 644042c
+HEAD is now at 644042c second commit in feature
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 METRO 197121  0 Oct  6 20:25 Taller_git/
+-rw-r--r-- 1 METRO 197121 50 Oct  6 20:59 archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git rebase feature
+Current branch master is up to date.
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 METRO 197121  0 Oct  6 20:25 Taller_git/
+-rw-r--r-- 1 METRO 197121 50 Oct  6 20:59 archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ ls -l
+total 1
+drwxr-xr-x 1 METRO 197121  0 Oct  6 20:25 Taller_git/
+-rw-r--r-- 1 METRO 197121 50 Oct  6 20:59 archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+METRO@SALOME MINGW64 ~/Taller_git (hotfix)
+$ git branch
+  feature
+* hotfix
+  master
+
+METRO@SALOME MINGW64 ~/Taller_git (hotfix)
+$ ls -l
+total 1
+drwxr-xr-x 1 METRO 197121  0 Oct  6 20:25 Taller_git/
+-rw-r--r-- 1 METRO 197121 50 Oct  6 20:59 archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (hotfix)
+$ echo "Correcion urgente" >> archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (hotfix)
+$ git commit -am "Hotfix"
+warning: in the working copy of 'Taller_git/archivo.txt', LF will be replaced by CRLF the next time Git touches it
+[hotfix c945517] Hotfix
+ 1 file changed, 1 insertion(+)
+
+METRO@SALOME MINGW64 ~/Taller_git (hotfix)
+$ git branch
+  feature
+* hotfix
+  master
+
+METRO@SALOME MINGW64 ~/Taller_git (hotfix)
+$ git log --oneline
+c945517 (HEAD -> hotfix) Hotfix
+644042c (master, feature) second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (hotfix)
+$ git checkout master
+Switched to branch 'master'
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git cherry-pick hotfix
+[master aaeaad6] Hotfix
+ Date: Sun Oct 6 21:14:23 2024 -0500
+ 1 file changed, 1 insertion(+)
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git reflog
+aaeaad6 (HEAD -> master) HEAD@{0}: cherry-pick: Hotfix
+644042c (feature) HEAD@{1}: checkout: moving from hotfix to master
+c945517 (hotfix) HEAD@{2}: commit: Hotfix
+644042c (feature) HEAD@{3}: checkout: moving from master to hotfix
+644042c (feature) HEAD@{4}: checkout: moving from feature to master
+644042c (feature) HEAD@{5}: checkout: moving from master to feature
+644042c (feature) HEAD@{6}: reset: moving to 644042c
+644042c (feature) HEAD@{7}: merge feature: Fast-forward
+524cdb4 HEAD@{8}: checkout: moving from feature to master
+644042c (feature) HEAD@{9}: commit: second commit in feature
+53314ed HEAD@{10}: commit: commit inicial
+524cdb4 HEAD@{11}: checkout: moving from master to feature
+524cdb4 HEAD@{12}: checkout: moving from feature to master
+524cdb4 HEAD@{13}: checkout: moving from master to feature
+524cdb4 HEAD@{14}: checkout: moving from newActi
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git log --graph --oneline --all
+* aaeaad6 (HEAD -> master) Hotfix
+| * c945517 (hotfix) Hotfix
+|/
+* 644042c (feature) second commit in feature
+* 53314ed commit inicial
+* 524cdb4 archivo html añadido
+* 7801f6d Subir ejemplo.js
+* 5696408 archivo app.py
+* 882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ echo "Change in feature" > conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git commit -am "Cambio en feature"
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.android/
+        ../.bash_history
+        ../.emulator_console_auth_token
+        ../.gitconfig
+        ../.gradle/
+        ../.lesshst
+        ../.ssh/
+        ../.viminfo
+        ../.vscode/
+        ../Aplicaciones/
+        ../AppData/
+        ../Contacts/
+        ../Downloads/
+        ../Favorites/
+        ../IntelGraphicsProfiles/
+        ../Links/
+        ../Music/
+        ../NTUSER.DAT
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TM.blf
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000001.regtrans-ms
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000002.regtrans-ms
+        ../OneDrive/
+        ../Saved Games/
+        ../Searches/
+        ../TallerGit/ejemplo/.index.html.swp
+        ../TallerGit/ejemplo/App.py
+        ../TallerGit/ejemplo/moda.py
+        ../TallerGit/moda.py
+        Taller_git/
+        conflicto.txt
+        ../Videos/
+        ../app.py
+        ../ntuser.dat.LOG1
+        ../ntuser.dat.LOG2
+        ../ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ echo "Change in master" > conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git commit -am "Cambio en master"
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.android/
+        ../.bash_history
+        ../.emulator_console_auth_token
+        ../.gitconfig
+        ../.gradle/
+        ../.lesshst
+        ../.ssh/
+        ../.viminfo
+        ../.vscode/
+        ../Aplicaciones/
+        ../AppData/
+        ../Contacts/
+        ../Downloads/
+        ../Favorites/
+        ../IntelGraphicsProfiles/
+        ../Links/
+        ../Music/
+        ../NTUSER.DAT
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TM.blf
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000001.regtrans-ms
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000002.regtrans-ms
+        ../OneDrive/
+        ../Saved Games/
+        ../Searches/
+        ../TallerGit/ejemplo/.index.html.swp
+        ../TallerGit/ejemplo/App.py
+        ../TallerGit/ejemplo/moda.py
+        ../TallerGit/moda.py
+        Taller_git/
+        conflicto.txt
+        ../Videos/
+        ../app.py
+        ../ntuser.dat.LOG1
+        ../ntuser.dat.LOG2
+        ../ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git merge feature
+Already up to date.
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git log --oneline
+aaeaad6 (HEAD -> master) Hotfix
+644042c (feature) second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git log --oneline
+644042c (HEAD -> feature) second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ echo "change in feature" > conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git log --oneline
+644042c (HEAD -> feature) second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git commit -am "Cambio en feature"
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.android/
+        ../.bash_history
+        ../.emulator_console_auth_token
+        ../.gitconfig
+        ../.gradle/
+        ../.lesshst
+        ../.ssh/
+        ../.viminfo
+        ../.vscode/
+        ../Aplicaciones/
+        ../AppData/
+        ../Contacts/
+        ../Downloads/
+        ../Favorites/
+        ../IntelGraphicsProfiles/
+        ../Links/
+        ../Music/
+        ../NTUSER.DAT
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TM.blf
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000001.regtrans-ms
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000002.regtrans-ms
+        ../OneDrive/
+        ../Saved Games/
+        ../Searches/
+        ../TallerGit/ejemplo/.index.html.swp
+        ../TallerGit/ejemplo/App.py
+        ../TallerGit/ejemplo/moda.py
+        ../TallerGit/moda.py
+        Taller_git/
+        conflicto.txt
+        ../Videos/
+        ../app.py
+        ../ntuser.dat.LOG1
+        ../ntuser.dat.LOG2
+        ../ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git status
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.android/
+        ../.bash_history
+        ../.emulator_console_auth_token
+        ../.gitconfig
+        ../.gradle/
+        ../.lesshst
+        ../.ssh/
+        ../.viminfo
+        ../.vscode/
+        ../Aplicaciones/
+        ../AppData/
+        ../Contacts/
+        ../Downloads/
+        ../Favorites/
+        ../IntelGraphicsProfiles/
+        ../Links/
+        ../Music/
+        ../NTUSER.DAT
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TM.blf
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000001.regtrans-ms
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000002.regtrans-ms
+        ../OneDrive/
+        ../Saved Games/
+        ../Searches/
+        ../TallerGit/ejemplo/.index.html.swp
+        ../TallerGit/ejemplo/App.py
+        ../TallerGit/ejemplo/moda.py
+        ../TallerGit/moda.py
+        Taller_git/
+        conflicto.txt
+        ../Videos/
+        ../app.py
+        ../ntuser.dat.LOG1
+        ../ntuser.dat.LOG2
+        ../ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git log --oneline
+644042c (HEAD -> feature) second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git add conflicto.txt
+warning: in the working copy of 'Taller_git/conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git commit -m "cambio en feature"
+[feature 3d7141b] cambio en feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Taller_git/conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git log --oneline
+3d7141b (HEAD -> feature) cambio en feature
+644042c second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (feature)
+$ git checkout master
+Switched to branch 'master'
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git add conflicto.txt
+fatal: pathspec 'conflicto.txt' did not match any files
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ ls -l
+total 1
+drwxr-xr-x 1 METRO 197121  0 Oct  6 20:25 Taller_git/
+-rw-r--r-- 1 METRO 197121 69 Oct  6 21:47 archivo.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ echo "Change in master" > conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ ls -l
+total 2
+drwxr-xr-x 1 METRO 197121  0 Oct  6 20:25 Taller_git/
+-rw-r--r-- 1 METRO 197121 69 Oct  6 21:47 archivo.txt
+-rw-r--r-- 1 METRO 197121 17 Oct  6 21:53 conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git add conflcito.txt
+fatal: pathspec 'conflcito.txt' did not match any files
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git commit -m "cambio en master"
+warning: could not open directory 'Configuración local/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Datos de programa/': Permission denied
+warning: could not open directory 'Documents/Mi música/': Permission denied
+warning: could not open directory 'Documents/Mis imágenes/': Permission denied
+warning: could not open directory 'Documents/Mis vídeos/': Permission denied
+warning: could not open directory 'Entorno de red/': Permission denied
+warning: could not open directory 'Impresoras/': Permission denied
+warning: could not open directory 'Menú Inicio/': Permission denied
+warning: could not open directory 'Mis documentos/': Permission denied
+warning: could not open directory 'Plantillas/': Permission denied
+warning: could not open directory 'Reciente/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.android/
+        ../.bash_history
+        ../.emulator_console_auth_token
+        ../.gitconfig
+        ../.gradle/
+        ../.lesshst
+        ../.ssh/
+        ../.viminfo
+        ../.vscode/
+        ../Aplicaciones/
+        ../AppData/
+        ../Contacts/
+        ../Downloads/
+        ../Favorites/
+        ../IntelGraphicsProfiles/
+        ../Links/
+        ../Music/
+        ../NTUSER.DAT
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TM.blf
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000001.regtrans-ms
+        ../NTUSER.DAT{34bff03b-f60f-11ee-aa8c-df78eeb50df7}.TMContainer00000000000000000002.regtrans-ms
+        ../OneDrive/
+        ../Saved Games/
+        ../Searches/
+        ../TallerGit/ejemplo/.index.html.swp
+        ../TallerGit/ejemplo/App.py
+        ../TallerGit/ejemplo/moda.py
+        ../TallerGit/moda.py
+        Taller_git/
+        conflicto.txt
+        ../Videos/
+        ../app.py
+        ../ntuser.dat.LOG1
+        ../ntuser.dat.LOG2
+        ../ntuser.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git log --oneline
+aaeaad6 (HEAD -> master) Hotfix
+644042c second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git add conflicto.txt
+warning: in the working copy of 'Taller_git/conflicto.txt', LF will be replaced by CRLF the next time Git touches it
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git commit -m "cambio en master"
+[master 4654de1] cambio en master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Taller_git/conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git log --oneline
+4654de1 (HEAD -> master) cambio en master
+aaeaad6 Hotfix
+644042c second commit in feature
+53314ed commit inicial
+524cdb4 archivo html añadido
+7801f6d Subir ejemplo.js
+5696408 archivo app.py
+882d0e9 añadir el archivo html
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$ git merge feature
+Auto-merging Taller_git/conflicto.txt
+CONFLICT (add/add): Merge conflict in Taller_git/conflicto.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+METRO@SALOME MINGW64 ~/Taller_git (master|MERGING)
+$ git revert -m 1 4654de1
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+
+METRO@SALOME MINGW64 ~/Taller_git (master|MERGING)
+$ git revert -m 1 4654de1
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+
+METRO@SALOME MINGW64 ~/Taller_git (master|MERGING)
+$ tree
+bash: tree: command not found
+
+METRO@SALOME MINGW64 ~/Taller_git (master|MERGING)
+$ git add conflicto.txt
+
+METRO@SALOME MINGW64 ~/Taller_git (master|MERGING)
+$
+
+METRO@SALOME MINGW64 ~/Taller_git (master|MERGING)
+$ git commit -m "nuevo cambio en master"
+[master 6a479b5] nuevo cambio en master
+
+METRO@SALOME MINGW64 ~/Taller_git (master)
+$
